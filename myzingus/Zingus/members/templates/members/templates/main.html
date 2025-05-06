@@ -1,0 +1,23 @@
+{% extends "master.html" %}
+{% load static %}
+
+{% block title %}
+  ZINGUS
+{% endblock %}
+
+
+{% block content %}
+
+  <h1>Zingus</h1>
+
+  <h3>Zinguses</h3>
+  
+  <p>Check out all our <a href="zinguses/"><span style="font-family: 'Segoe Script', serif; color: yellow;">zinguses</span></a></p>
+  	
+  <div style="text-align: center; ">
+    <img src="{% static 'zingus.png' %}" alt="Centered Image"
+         style="width: 600px; height: 300px;">
+  </div>
+  <p><a href="cool/" style="color: yellow; font-size: 15px">cool</a></p>
+  
+{% endblock %}

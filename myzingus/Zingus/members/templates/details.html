@@ -1,0 +1,19 @@
+{% extends "master.html" %}
+
+{% block title %}
+  ZINGUS
+{% endblock %}
+
+
+{% block content %}
+  <h1>{{ mymember.firstname }} {{ mymember.lastname }}</h1>
+
+  <p>Email: {{ mymember.email }}</p>  
+  <p>Phone: {{ mymember.phone }}</p>
+  <p>Zingus since: {{ mymember.joined_date }}</p>
+  <p>Zingus Coins: {{ mymember.zinguscoin }}</p>
+  <p>Zingus? {{ mymember.zingus }}</p>
+  
+  <p>Back to <a href="/zinguses/"><span style="font-family: 'Segoe Script', serif; color: yellow;">zinguses</span></a></p>
+  
+{% endblock %}

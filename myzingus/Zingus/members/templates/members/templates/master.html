@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  <style>
+	body {
+		background-color: purple;
+	}
+	h1 {
+		color: orange;
+		font-family: 'Impact', serif;
+		font-size: 80px;
+		text-align: center;
+	}
+	h2 {
+		font-family: 'Arial', sans-serif;
+		font-size: 30px;
+		text-align: center;
+	}
+	h3 {
+		font-family: 'Arial', serif;
+		font-size: 30px;
+		text-align: center;
+	}
+	p {
+		font-family: 'Arial', serif;
+		font-size: 30px;
+		text-align: center;
+	}
+	img {
+		text-align: center;
+	}
+  </style>
+</head>
+<body>
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>

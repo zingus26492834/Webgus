@@ -1,0 +1,28 @@
+{% extends "master.html" %}
+{% load static %}
+
+{% block title %}
+  ZINGUS
+{% endblock %}
+
+{% block content %}
+
+
+  <p><a href="/" style="color: yellow; font-size: 15px">HOME</a></p>
+  <h1>Zingus</h1>
+  	
+  <form method="GET" action="{% url 'search' %}" style="margin: auto; text-align: center;">
+    <input type="text" name="q" placeholder="Type first name" style="height: 50px; width: 60%; font-size: 40px;">
+    <button type="submit" style="height: 30px; width: 6%;">Search</button>
+  </form>
+
+{% if results %}
+  <ul>
+  {% for member in results %}
+    <a href="details/{{ member.id }}" style="color: yellow; font-size: 75px; text-align: center;"><li>{{ member.firstname }} {{ member.lastname }}</li></a>
+  {% endfor %}
+  </ul>
+{% else %}
+  <p> Couldn't find any zinguses</p>
+{% endif %}
+{% endblock %}

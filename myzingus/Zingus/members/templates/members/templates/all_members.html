@@ -1,0 +1,30 @@
+{% extends "master.html" %}
+
+{% block title %}
+  ZINGUS
+{% endblock %}
+
+
+{% block content %}
+
+  <p><a href="/";  style="color: yellow;">HOME</a></p>
+
+  <h1>Zinguses</h1>
+  
+  <p><a href="search/";  style="color: yellow;">search</a></p>
+  <table border="1" style="background-color: white; margin: auto; width: 80%; height: 200px; font-size: 30px">
+  {% for x in mymembers %}
+  <tr>
+  <td>{{ x.id }}</td>
+  <td>{{ x.firstname }}</td>
+  <td>{{ x.lastname }}</td>
+  <td>{{ x.joined_date }}</td>
+  </tr>
+  {% endfor %}
+  </table>
+
+  <p>
+  <a href="add/">Add Zingus</a>
+  </p>
+
+{% endblock %}

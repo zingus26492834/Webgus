@@ -1,0 +1,33 @@
+{% extends "master.html" %}
+
+{% block title %}
+  ZINGUS
+{% endblock %}
+
+
+{% block content %}
+
+  <h1>Zingus</h1>
+
+<h2>Add Zingus</h2>
+
+<form action="addrecord/" method="post" style="margin: auto; text-align: center; font-size: 25px;">
+  {% csrf_token %}
+  First Name:<br>
+  <input name="first" style="width: 35%; height: 25px; font-size: 20px;">
+  <br><br>
+  Last Name:<br>
+  <input name="last" style="width: 35%; height: 25px; font-size: 20px;">
+  <br><br>
+  Phone:<br>
+  <input name="phoneno" style="width: 35%; height: 25px; font-size: 20px;">
+  <br><br>
+  Email:<br>
+  <input name="emailad" style="width: 35%; height: 25px; font-size: 20px;">
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+
+  <p><a href="/zinguses" style="color: yellow; font-size: 15px">back</a></p>
+
+{% endblock %}

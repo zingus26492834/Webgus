@@ -1,0 +1,43 @@
+{% extends "master.html" %}
+{% load static %}
+
+{% block title %}
+  Zingus
+{% endblock %}
+
+
+{% block content %}
+
+  <h1>Zingus</h1>
+  
+  <style>
+  @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+  }
+
+  .moving-letter {
+      display: inline-block;
+      animation: bounce 1s infinite alternate ease-in-out;
+  }
+  </style>
+
+
+  <p>
+    <a href="/" style="text-decoration: none;">
+    <span class="moving-letter" style="font-family: 'Segoe Script', serif; color: yellow;">w</span>
+    <span class="moving-letter" style="animation-delay: 0.1s; font-family: 'Segoe Script', serif; color: yellow;">o</span>
+    <span class="moving-letter" style="animation-delay: 0.2s; font-family: 'Segoe Script', serif; color: yellow;">a</span>
+    <span class="moving-letter" style="animation-delay: 0.3s; font-family: 'Segoe Script', serif; color: yellow;">h</span>
+    <span class="moving-letter" style="animation-delay: 0.4s; font-family: 'Segoe Script', serif; color: yellow;">h</span>
+    </a>
+  </p>
+
+
+  
+  <div style="text-align: center; ">
+    <img src="{% static 'zingusstyle.gif' %}" alt="Animated GIF"
+         style="width: 400px; height: 300px;">
+  </div>
+  
+{% endblock %}
